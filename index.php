@@ -47,8 +47,8 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
       	to hack because of the length.  The cryptic passwords look secure on the surface, 
       	but short passwords can be hacked by "brute force" methods. </p>
       <br>
-      <h4>Gregg's Password Generator</h4>
 		<form method='POST' action='index.php'>
+      <h4>Gregg's Password Generator</h4>
 		<br>
 		How many words in your password? 
 		<input type='number' name='wordsInPassword' min="3" max="9" step="1" value=3 >
@@ -68,16 +68,15 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
 		<br> 			
 		<br>
 		<input type='submit' name="formSubmit" value='Submit'>
-
-	</form>
+		</form>
 
 	<?php 
 	if($_POST['formSubmit'] == 'Submit') 
 	{	   
-		$varWordsInPassword = $_POST['wordsInPassword'];
-		$varIncludeNumber = $_POST['includeNumber'];
-		$varincludeSpecChar = $_POST['includeSpecChar'];	
-		$varWordSeperator = $_POST['wordSeperator'];	
+		//$varWordsInPassword = $_POST['wordsInPassword'];
+		//$varIncludeNumber = $_POST['includeNumber'];
+		//$varincludeSpecChar = $_POST['includeSpecChar'];	
+		//$varWordSeperator = $_POST['wordSeperator'];	
 	}
 	?>
 	 Generated password: <?php echo $concatPassword ?>		

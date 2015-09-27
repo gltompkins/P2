@@ -36,29 +36,36 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
   	<div class="container-fluid"> 
       <h2 align="center">Project 2 - xkcd Password Generator</h2>
       <br>
-      <h4>The premise of the cartoon and the "passphrase" password trend is that longer passwords 
-      	 that are conversational phrases surpass cryptic passwords.  The cryptic passwords
-      	 look secure on the surface, but short passwords can be hacked by "brute force" methods. </h4>
+		<img title="xkcd cartoon" alt="...xkcd cartoon..." src="http://imgs.xkcd.com/comics/password_strength.png">
+		<br>cartoon by Randall P. Munroe, from xkcd.com 
+		<br>
+      <a href="http://xkcd.com/936/">link to http://xkcd.com</a>
+		<br>
+		<br>         
+      <p>The message of the cartoon is longer passwords that are conversational phrases 
+      	beat cryptic passwords.  The phrases are easier to remember, and more difficult 
+      	to hack because of the length.  The cryptic passwords look secure on the surface, 
+      	but short passwords can be hacked by "brute force" methods. </p>
       <br>
-      <h4>Here's the link to the xkcd cartoon </h4>
-      <a href="http://xkcd.com/936/">http://xkcd.com</a>
-      <br>
-      <br>
-	 
+      <h4>Gregg's Password Generator</h4>
 		<form method='POST' action='index.php'>
 		<br>
-		How many words in your password (min 3, max 9)? 
-		<input type='number' name='wordsInPassword' min="3" max="9" step="1" >
-		min/max message
+		How many words in your password? 
+		<input type='number' name='wordsInPassword' min="3" max="9" step="1" value=3 >
+		(min 3, max 9)
 		<br>
-		Append a number to the password? 
-		<!-- <input type='text' name='includeNumber' size="1" maxlength="1" ><br>  -->
-		<input type='checkbox' name='includeNumber' value="useNumber" ><br>
-
-		Append a special character to the password? 
-		<!-- <input type='text' name='includeSpecChar' size="1" maxlength="1" ><br> -->
-		<input type='checkbox' name='includeSpecChar' value="useSpecChar" /> 
+		Number to append to the password  
+		<input type='text' name='includeNumber' size="1" maxlength="1"  >
+		(leave empty for none)
 		<br>
+		Special character to append to the password  
+		<input type='text' name='includeSpecChar' size="1" maxlength="1" >
+		(leave empty for none)
+		<br> 
+		Password word separator   
+		<input type='text' name='wordSeperator' size="1" maxlength="1" value="-" >
+		('-' is the default)
+		<br> 			
 		<br>
 		<input type='submit' name="formSubmit" value='Submit'>
 
@@ -66,16 +73,16 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
 
 	<?php 
 	if($_POST['formSubmit'] == 'Submit') 
-	{
+	{	   
 		$varWordsInPassword = $_POST['wordsInPassword'];
 		$varIncludeNumber = $_POST['includeNumber'];
 		$varincludeSpecChar = $_POST['includeSpecChar'];	
+		$varWordSeperator = $_POST['wordSeperator'];	
 	}
 	?>
 	 Generated password: <?php echo $concatPassword ?>		
   			 <!--   <div class="button">   -->
   			 <br>
-   <!-- <button type="submit">Send your message</button>   -->
         	<br>
          <br>
 

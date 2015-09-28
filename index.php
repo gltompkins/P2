@@ -22,10 +22,8 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
 	
 	<?php
 	require('logic.php');
-	?>
-	
-	
-	
+	?>	
+		
 </head>
 
 <body>  
@@ -35,23 +33,20 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
   		</div>
   	<div class="container-fluid"> 
       <h2 align="center">Project 2 - xkcd Password Generator</h2>
-      <br>
-		<img title="xkcd cartoon" alt="...xkcd cartoon..." src="http://imgs.xkcd.com/comics/password_strength.png">
+		<img title="xkcd cartoon" alt="...picture of xkcd cartoon..." 
+			src="http://imgs.xkcd.com/comics/password_strength.png" width="600"
+			class="img-responsive">
 		<br>cartoon by Randall P. Munroe, from xkcd.com 
-		<br>
       <a href="http://xkcd.com/936/">link to http://xkcd.com</a>
 		<br>
-		<br>         
       <p>The message of the cartoon is longer passwords that are conversational phrases 
       	beat cryptic passwords.  The phrases are easier to remember, and more difficult 
       	to hack because of the length.  The cryptic passwords look secure on the surface, 
       	but short passwords can be hacked by "brute force" methods. </p>
       <br>
 		<form method='POST' action='index.php'>
-      <h4>Gregg's Password Generator</h4>
-		<br>
 		How many words in your password? 
-		<input type='number' name='wordsInPassword' min="3" max="9" step="1" value=3 >
+		<input type='number' name='wordsInPassword' min="3" max="9" step="1" value=3 autofocus >
 		(min 3, max 9)
 		<br>
 		Number to append to the password  
@@ -65,30 +60,21 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
 		Password word separator   
 		<input type='text' name='wordSeperator' size="1" maxlength="1" value="-" >
 		('-' is the default)
-		<br> 			
 		<br>
 		<input type='submit' name="formSubmit" value='Submit'>
 		</form>
 
 	<?php 
-	if($_POST['formSubmit'] == 'Submit') 
-	{	   
-		//$varWordsInPassword = $_POST['wordsInPassword'];
-		//$varIncludeNumber = $_POST['includeNumber'];
-		//$varincludeSpecChar = $_POST['includeSpecChar'];	
-		//$varWordSeperator = $_POST['wordSeperator'];	
-	}
+	//if($_POST['formSubmit'] == 'Submit') 
+	//{	   
+	//	$varWordsInPassword = $_POST['wordsInPassword'];
+	//	$varIncludeNumber = $_POST['includeNumber'];
+	//	$varincludeSpecChar = $_POST['includeSpecChar'];	
+	//	$varWordSeperator = $_POST['wordSeperator'];	
+	//}
 	?>
-	 Generated password: <?php echo $concatPassword ?>		
-  			 <!--   <div class="button">   -->
-  			 <br>
-        	<br>
-         <br>
-
-    </div>
-  				
-</form>
-
-	 
+	Generated password: <?php echo $concatPassword ?>		
+   </div>			
+	</form>	 
 </body>
 </html>

@@ -1,4 +1,4 @@
-## P1
+## P2
 ##Dynamic Web Application, DWA15 class, Project 2
 Lindal Gregg Tompkins
 
@@ -22,3 +22,5 @@ Here's the link to the github repository
 and the project webpage  
 [http://p2.greggtompkins.com](http://p2.greggtompkins.com)
 
+and the link to the demo video
+[https://youtu.be/WTxAdzRmhGg] (Gregg's youtube.com demo video)

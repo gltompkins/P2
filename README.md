@@ -23,4 +23,4 @@ and the project webpage
 [http://p2.greggtompkins.com](http://p2.greggtompkins.com)
 
 and the link to the demo video
-[https://youtu.be/WTxAdzRmhGg] (Gregg's youtube.com demo video)
+[Gregg's youtube.com demo video](https://youtu.be/WTxAdzRmhGg) 
